@@ -1,0 +1,185 @@
+.centerBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100vw - 20vw - 25rem);
+    height: 97vh;
+    background-color: var(--bgColor);
+    background-image: url("../../public/bgPattern.jpg");
+    background-size: fill;
+    background-blend-mode: var(--bgImgBlend);
+    border-radius: 0 8px 8px 0px;
+    overflow: hidden;
+    color: var(--textColor);
+    border-left: 1px solid var(--altBorderColor);
+}
+
+
+
+
+
+.header {
+    background-color: var(--highlightColor);
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding:0vw 1vw 0vw 1vw;
+    width: inherit;
+    align-self: flex-start;
+}
+
+.chatArea {
+    height: 90vh;
+    width: inherit;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 4rem 1vw 1vh 1vw;
+}
+
+.footer {
+    align-self: flex-end;
+    background-color: var(--highlightColor);
+    height: fit-content;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding:0vw 1vw 0vw 1vw;
+}
+
+
+.button {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--iconColor);
+    background-color: inherit;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+.button:active {
+    background-color: var(--altTextColor);
+}
+
+.user {
+    width: 2rem;
+    height: 2rem;
+    background-color:inherit;
+    color: var(--iconColor);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.flexContainer {
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    background-color: inherit;
+}
+
+
+.textBar {
+    box-sizing: border-box;
+    width: 48vw;
+    border: none;
+    max-height: 15vh;
+    min-height: 5vh;
+    color: var(--textColor);
+    background-color: var(--altHighlightColor);
+    margin: 1vh;
+    padding: 8px;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+
+}
+
+.receivedMsg {
+    background-color: var(--altHighlightColor);
+    width: fit-content;
+    max-width: 45vw;
+    padding: 8px 12px;
+    margin: 1px 8px;
+    font-size: small;
+    align-self: flex-start;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 2px 2px 8px var(--rootColor);
+}
+
+.sentMsg {
+    background-color: var(--msgColor);
+    width: fit-content;
+    max-width: 45vw;;
+    padding: 8px 12px;
+    margin: 1px 8px;
+    font-size: small;
+    align-self: flex-end;
+    border-radius: 8px 8px 0px 8px;
+    box-shadow: -2px 2px 8px var(--rootColor);
+}
+
+.rotate {
+    transform: rotateZ(90deg);
+}
+
+.scroller {
+    height: 2px;
+    width: 2px;
+    margin: none;
+    padding: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .centerBlock {
+      margin: 0;
+      width: calc(100vw - 25rem);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .centerBlock {
+      margin: 0;
+      width: calc(100vw - 20rem);
+    }
+
+    .receivedMsg {
+        width: fit-content;
+        max-width: 40vw;
+    }
+
+    .sentMsg {
+        width: fit-content;
+        max-width: 40vw;
+    }
+}
+@media screen and (max-width: 750px) {
+    .centerBlock {
+      margin: 0;
+      width: calc(100vw - 3rem);
+    }
+
+    .receivedMsg {
+        width: auto;
+        max-width: 70vw;
+    }
+
+    .sentMsg {
+        width: auto;
+        max-width: 70vw;
+    }
+
+    .textBar {
+        width: 70vw;
+    }
+}

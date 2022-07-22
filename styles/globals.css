@@ -1,9 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap");
+
+:root {
+  --rootColor: #0a1014;
+  --bgColor: #111b21;
+
+  --highlightColor: #202c33;
+  --altHighlightColor: #2a3941;
+
+  --textColor: #e9edef;
+  --altTextColor: #86969f;
+
+  --iconColor: #86969f;
+
+  --borderColor: #222d34;
+  --altBorderColor: #313d45;
+
+  --bgImgBlend: multiply;
+  --msgColor: #065c4c;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Hind Siliguri", sans-serif;
+  overflow: hidden;
+  height: auto;
 }
 
 a {
@@ -13,4 +35,33 @@ a {
 
 * {
   box-sizing: border-box;
+  background-color: var(--rootColor);
+}
+
+p {
+  font-size: 14px;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 16px;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+::placeholder {
+  color: var(--iconColor);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--bgColor);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--altHighlightColor);
+  border-radius: 1px;
 }

@@ -1,0 +1,53 @@
+.container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url("../public/bgPattern.jpg");
+    background-blend-mode: var(--bgImgBlend);
+}
+
+.dropBackground {
+    background-color: var(--bgColor);
+    background-image: url("../public/bgPattern.jpg");
+    padding: 1vh;
+    border-radius: 12px;
+    background-blend-mode: var(--bgImgBlend);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+    height: 250px;
+    width: 250px;
+    color: rgb(67, 103, 109);
+    background-color: transparent;
+}
+
+.LoginContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    background-color: var(--highlightColor);
+    margin: 0 auto;
+    transition: all 250ms ease-out;
+}
+
+.LoginContainer img {
+    padding: 0;
+    margin: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+}
+
+.LoginContainer h3 {
+    color: var(--textColor);
+}
+
+.LoginContainer:hover {
+    filter: drop-shadow(0px 0px 5px var(--altHighlightColor));
+    background-color: var(--altHighlightColor);
+}
